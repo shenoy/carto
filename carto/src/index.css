@@ -1,0 +1,187 @@
+html {
+  font-family: Roboto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  border: none;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+  margin: 10px 0;
+  width: 70%;
+  flex-direction: column;
+}
+
+.timeline-item-content {
+  max-width: 100%;
+  align-items: flex-start;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  color: #272727;
+}
+
+/* incomlete tasks circle */
+.circle {
+  background-color: #ffbe22;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 20px;
+  left: -50px;
+}
+
+.circle-tick {
+  background-image: url("tick.png");
+  opacity: 1;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 20px;
+  left: -50px;
+}
+
+h2 {
+  margin-left: 10%;
+}
+
+.progress {
+  width: 57%;
+  margin-left: 10%;
+}
+.progress::-webkit-progress-bar {
+  background-color: rgb(235, 227, 227);
+}
+
+.progress::-webkit-progress-value {
+  background-color: #ffbe22;
+}
+
+.flex {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-left: 10%;
+}
+
+.flexend {
+  width: 600px;
+}
+
+.flexend .name {
+  float: left;
+  width: 50%;
+  font-size: 1.1rem;
+}
+
+.flexend .date {
+  float: right;
+  color: rgb(173, 169, 169);
+}
+
+/* .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.complete {
+  background-color: #ffbe22;
+  color: white;
+  font-size: 2rem;
+  display: inline-block;
+  border: 1px solid rgb(250, 166, 166);
+  border-radius: 20px;
+}
+
+.incomplete {
+  background-color: white;
+  color: rgb(204, 194, 194);
+  font-size: 2rem;
+  display: inline-block;
+  border: 1px solid rgb(209, 207, 207);
+  border-radius: 30px;
+}
+
+.scroll {
+  max-height: 50vh;
+  overflow-y: auto;
+  margin-bottom: 5%;
+  overflow-x: auto;
+}
+
+.scroll::before {
+  background-color: #ffbe22;
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 63%;
+  margin-top: 4%;
+  left: 10.25%;
+}
+
+.timeline {
+  max-width: 900px;
+}
+
+@media only screen and (max-width: 768px) {
+
+  body{
+    overflow-x: auto;
+  }
+
+  .timeline{
+    overflow-x: auto;
+  }
+  .scroll::before {
+    background-color: #ffbe22;
+    content: "";
+    position: absolute;
+    width: 3px;
+    left: 10.1%;
+    height: 50%; 
+  }
+
+  .scroll {
+    max-height: 50vh;
+    overflow-y: auto;
+    margin-bottom: 5%;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+
+  .complete {
+    background-color: #ffbe22;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    border: 1px solid rgb(250, 166, 166);
+    border-radius: 20px;
+    overflow-x: hidden;
+  }
+
+  .incomplete {
+    background-color: white;
+    color: rgb(204, 194, 194);
+    font-size: 2rem;
+    display: inline-block;
+    border: 1px solid rgb(209, 207, 207);
+    border-radius: 30px;
+    overflow-x: hidden;
+  }
+}
